@@ -1,0 +1,33 @@
+{
+  "provider": "github",
+  "round": "gate-r0",
+  "manifests": {
+    ".github/workflows/ci.yml": {
+      "removedTriggers": [
+        "push",
+        "merge_group"
+      ],
+      "removedEnv": [
+        "TURBO_TEAM",
+        "TURBO_TOKEN"
+      ],
+      "removedJobs": [],
+      "runsOnChanges": [
+        {
+          "job": "lint",
+          "from": "ubuntu-latest"
+        },
+        {
+          "job": "format",
+          "from": "ubuntu-latest"
+        },
+        {
+          "job": "typecheck",
+          "from": "ubuntu-latest"
+        }
+      ],
+      "localReusable": []
+    }
+  },
+  "deleted": []
+}
