@@ -32,3 +32,4 @@ export const postRouter = {
     return ctx.db.delete(Post).where(eq(Post.id, input));
   }),
 } satisfies TRPCRouterRecord;
+// cicdbench edit
